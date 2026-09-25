@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head><link rel="preconnect" href="https://images.unsplash.com">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="24 STREET — selección multimarca de streetwear, zapatillas, relojes y accesorios." />
+  <meta name="theme-color" content="#171716" />
+  <title>24 STREET — La ciudad se lleva puesta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    (() => {
+      try {
+        const stored = localStorage.getItem('24street-theme');
+        const theme = stored || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.dataset.accent = localStorage.getItem('24street-accent') || 'gold';
+      } catch (_) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="home.css" />
+<link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="apple-icon.png"></head>
+<body class="home-page" data-view="home">
+  <div class="loading-screen" id="loadingScreen" aria-hidden="true"><div class="loading-mark"><svg class="wordmark-art" viewBox="0 0 340 84" aria-hidden="true" focusable="false"><text x="0" y="70" fill="currentColor" font-family="Arial Narrow,Arial,sans-serif" font-size="82" font-stretch="condensed" font-weight="800" letter-spacing="-8">24</text><path d="M101 13v58" stroke="var(--accent)" stroke-width="4"/><text x="120" y="59" fill="currentColor" font-family="Arial,sans-serif" font-size="36" font-weight="700" letter-spacing="5">STREET</text></svg><div class="loading-line"><i></i></div></div></div>
+  <header class="site-header" id="siteHeader">
+    <a class="wordmark" href="index.html#inicio" aria-label="24 STREET, inicio"><svg class="wordmark-art" viewBox="0 0 340 84" aria-hidden="true" focusable="false"><text x="0" y="70" fill="currentColor" font-family="Arial Narrow,Arial,sans-serif" font-size="82" font-stretch="condensed" font-weight="800" letter-spacing="-8">24</text><path d="M101 13v58" stroke="var(--accent)" stroke-width="4"/><text x="120" y="59" fill="currentColor" font-family="Arial,sans-serif" font-size="36" font-weight="700" letter-spacing="5">STREET</text></svg></a>
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      <a href="index.html#inicio">Inicio</a><a href="catalogo.html">Catálogo</a><a href="ropa.html">Ropa</a><a href="zapatillas.html">Zapatillas</a><a href="relojes.html">Relojes</a><a href="accesorios.html">Accesorios</a><a href="marcas.html">Marcas</a><a href="ofertas.html">Ofertas</a>
+    </nav>
+    <div class="header-actions">
+      <a class="icon-action" id="searchToggle" href="buscar.html" aria-label="Buscar"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.4"></circle><path d="m16 16 5 5"></path></svg></a>
+      <a class="icon-action cart-icon" id="cartToggle" href="carrito.html" aria-label="Carrito, 0 productos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 5h2l1.7 10.2a2 2 0 0 0 2 1.7h8.6a2 2 0 0 0 1.9-1.5L21 8H7"></path><path d="M9 20.5h.01M18 20.5h.01"></path></svg><span id="cartCount">0</span></a>
+      <a class="icon-action settings-link" href="ajustes.html" aria-label="Ajustes"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="m19.4 15 .1.1a1.7 1.7 0 0 1-2.4 2.4l-.1-.1a1.7 1.7 0 0 0-2.9 1.2v.2a1.7 1.7 0 0 1-3.4 0v-.2a1.7 1.7 0 0 0-2.9-1.2l-.1.1a1.7 1.7 0 0 1-2.4-2.4l.1-.1a1.7 1.7 0 0 0-1.2-2.9H4a1.7 1.7 0 0 1 0-3.4h.2a1.7 1.7 0 0 0 1.2-2.9l-.1-.1a1.7 1.7 0 0 1 2.4-2.4l.1.1a1.7 1.7 0 0 0 2.9-1.2V2a1.7 1.7 0 0 1 3.4 0v.2a1.7 1.7 0 0 0 2.9 1.2l.1-.1a1.7 1.7 0 0 1 2.4 2.4l-.1.1a1.7 1.7 0 0 0 1.2 2.9h.2a1.7 1.7 0 0 1 0 3.4h-.2a1.7 1.7 0 0 0-1.2 2.9Z"></path></svg></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNav"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil">
+      <a href="index.html#inicio">Inicio</a><a href="catalogo.html">Catálogo</a><a href="ropa.html">Ropa</a><a href="zapatillas.html">Zapatillas</a><a href="relojes.html">Relojes</a><a href="accesorios.html">Accesorios</a><a href="marcas.html">Marcas</a><a href="ofertas.html">Ofertas</a><a href="contacto.html">Contacto</a><a href="ajustes.html">Ajustes</a>
+    </nav>
+    <div class="search-panel" id="searchPanel" aria-label="Búsqueda rápida">
+      <div class="search-kicker">24 STREET / BUSCAR</div>
+      <form id="homeSearchForm" action="buscar.html"><label for="searchInput">¿Qué estás buscando?</label><input id="searchInput" name="q" type="search" placeholder="Marca, producto o categoría" autocomplete="off" /><div class="search-results-meta" id="searchResultsMeta">Explorá productos, marcas y categorías.</div><button class="search-submit" type="submit">Ver resultados ↗</button></form>
+      <div class="search-suggestions"><button type="button" data-search="reloj">Relojes</button><button type="button" data-search="zapatillas">Zapatillas</button><button type="button" data-search="nike">Nike</button><button type="button" data-search="buzo">Buzos</button></div><span>ESC para cerrar</span>
+    </div>
+  </header>
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="heroTitle">
+      <div class="hero-backdrop" aria-hidden="true"></div>
+      <video class="hero-video" id="heroVideo" aria-hidden="true" tabindex="-1" muted loop playsinline preload="none">
+        <source data-src="https://videos.pexels.com/video-files/15615496/15615496-hd_1920_1080_60fps.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-content reveal">
+        <div class="hero-brand"><span>24 STREET</span><span>Selección multimarca</span></div>
+        <p class="eyebrow light">Ropa · zapatillas · objetos</p>
+        <h1 class="hero-title" id="heroTitle"><span>24</span>STREET</h1>
+        <p class="hero-line">La ciudad se lleva puesta.</p>
+        <div class="hero-cta-row"><a class="button button-light" href="catalogo.html">Explorar selección <span>↗</span></a></div>
+      </div>
+      <a class="hero-footer" href="#categorias"><span>Catálogo y precios de demostración</span><span class="scroll-cue"><span>Deslizá para explorar</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v12m0 0 4-4m-4 4-4-4"></path></svg></span></a>
+    </section>
+    <section class="home-explore" id="categorias" aria-labelledby="homeExploreTitle">
+      <div class="home-explore-head"><h2 class="eyebrow" id="homeExploreTitle">Encontrá tu próxima pieza</h2><small>Cuatro entradas al universo 24 STREET.</small></div>
+      <div class="home-explore-grid">
+        <a class="home-explore-card" href="ropa.html"><span class="home-explore-card-content"><span>Ropa</span><b aria-hidden="true">↗</b></span></a>
+        <a class="home-explore-card" href="zapatillas.html"><span class="home-explore-card-content"><span>Zapatillas</span><b aria-hidden="true">↗</b></span></a>
+        <a class="home-explore-card" href="relojes.html"><span class="home-explore-card-content"><span>Relojes</span><b aria-hidden="true">↗</b></span></a>
+        <a class="home-explore-card" href="accesorios.html"><span class="home-explore-card-content"><span>Accesorios</span><b aria-hidden="true">↗</b></span></a>
+      </div>
+    </section>
+    <section class="home-featured" aria-labelledby="featuredTitle">
+      <div class="home-featured-head"><h2 id="featuredTitle">Elegidos de la selección</h2><a href="catalogo.html">Ver catálogo completo ↗</a></div>
+      <div class="product-grid" id="homeFeaturedGrid" aria-live="polite"></div>
+    </section>
+    <section class="feature-banner reveal"><div class="feature-copy"><p class="eyebrow light">24 STREET / PUNTO DE VISTA</p><h2>Vestí tu<br /><em>propio camino.</em></h2><a class="button button-light" href="marcas.html">Conocé las marcas <span>↗</span></a></div></section>
+    <section class="editorial-motion section-pad reveal" aria-labelledby="editorialTitle">
+      <div class="editorial-copy"><p class="eyebrow">Selección 24 / 01</p><h2 id="editorialTitle">Una mirada<br /><em>en movimiento.</em></h2><p>Distintas marcas, una misma actitud: piezas para salir, cruzar la ciudad y hacerla propia.</p><span class="motion-status"><i aria-hidden="true"></i> Curaduría multimarca · Catálogo demo</span></div>
+      <div class="editorial-frame" role="img" aria-label="Editorial de moda urbana"><div class="editorial-image"></div><span class="frame-mark">24 / STREET</span></div>
+    </section>
+    <section class="catalog-section" id="catalogo-home" aria-labelledby="catalogTitle">
+      <div class="section-heading catalog-heading reveal"><div><p class="eyebrow">Descubrí la selección</p><h2 id="catalogTitle">Objetos con<br /><em>actitud.</em></h2></div><p class="catalog-note">Productos y precios de demostración. Consultá disponibilidad antes de comprar.</p></div>
+      <div class="filter-row reveal"><div class="filter-group" id="categoryFilters" aria-label="Filtrar por categoría"><button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">Todo</button><button class="filter-btn" type="button" data-filter="remeras" aria-pressed="false">Remeras</button><button class="filter-btn" type="button" data-filter="buzos" aria-pressed="false">Buzos</button><button class="filter-btn" type="button" data-filter="pantalones" aria-pressed="false">Pantalones</button><button class="filter-btn" type="button" data-filter="camperas" aria-pressed="false">Camperas</button><button class="filter-btn" type="button" data-filter="zapatillas" aria-pressed="false">Zapatillas</button><button class="filter-btn" type="button" data-filter="relojes" aria-pressed="false">Relojes</button><button class="filter-btn" type="button" data-filter="accesorios" aria-pressed="false">Accesorios</button></div><label class="sr-only" for="sortSelect">Ordenar productos</label><select id="sortSelect"><option value="featured">Destacados</option><option value="low">Precio menor</option><option value="high">Precio mayor</option></select></div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div><p class="empty-state" id="emptyState" role="status">No encontramos piezas con esa búsqueda.</p><button class="load-more" id="loadMore" type="button">Ver más piezas <span aria-hidden="true">+</span></button>
+    </section>
+    <section class="brand-strip reveal" aria-label="Marcas del catálogo"><p class="eyebrow">Una selección de nombres · Marcas en catálogo demo</p><div><span>CASIO</span><span>NIKE</span><span>SEIKO</span><span>ADIDAS</span><span>VANS</span><span>NEW BALANCE</span></div></section>
+    <section class="service-section section-pad" aria-labelledby="serviceTitle"><div class="service-intro reveal"><p class="eyebrow">Información</p><h2 id="serviceTitle">Antes de<br /><em>elegir.</em></h2></div><div class="service-list"><details class="reveal"><summary>¿Los productos están disponibles? <span aria-hidden="true">+</span></summary><p>El catálogo, los precios y la disponibilidad son de demostración. Consultá por WhatsApp para confirmar información de una pieza.</p></details><details class="reveal"><summary>¿Cómo consulto por un producto? <span aria-hidden="true">+</span></summary><p>Agregá piezas a tu selección y enviá la consulta desde el carrito, o escribinos directamente por WhatsApp.</p></details><details class="reveal"><summary>Envíos, cambios y devoluciones <span aria-hidden="true">+</span></summary><p>Las condiciones comerciales todavía no están publicadas. Confirmalas con el equipo antes de realizar una compra.</p></details><details class="reveal"><summary>Medios de pago <span aria-hidden="true">+</span></summary><p>Consultá los medios de pago disponibles junto con el precio y la disponibilidad vigentes.</p></details></div></section>
+    <section class="contact-section" id="contacto"><div class="contact-image" role="img" aria-label="Moda urbana en la ciudad"></div><div class="contact-content reveal"><p class="eyebrow light">¿Hablamos?</p><h2>Encontrá tu<br /><em>próxima pieza.</em></h2><p>Consultanos por disponibilidad y detalles del catálogo.</p><a class="button button-light" href="https://wa.me/5493814195683?text=Hola%2024%20STREET%2C%20quiero%20consultar%20por%20una%20pieza." target="_blank" rel="noreferrer">Hablar por WhatsApp <span>↗</span></a><div class="contact-details"><span>WhatsApp<br /><strong>+54 9 381 419-5683</strong></span><span>Instagram<br /><strong>@24street.placeholder</strong></span><span>Email<br /><strong>hola@24street.com</strong></span><span>Catálogo<br /><strong>Productos de demostración</strong></span></div></div></section>
+    <section class="location-section section-pad"><div class="location-copy reveal"><p class="eyebrow">Encontranos</p><h2>Próxima<br /><em>parada.</em></h2><p>La dirección y los horarios todavía no están definidos. Consultanos por los canales de contacto.</p><span class="placeholder-label">Ubicación por anunciar</span><div class="hours"><span>Horarios</span><strong>A confirmar</strong></div></div><div class="map-placeholder reveal" role="img" aria-label="Ubicación por anunciar"><div class="map-grid"></div><div class="pin" aria-hidden="true">24</div><span>Ubicación<br />por anunciar</span></div></section>
+  </main>
+  <footer><a class="wordmark" href="index.html#inicio" aria-label="24 STREET, inicio"><svg class="wordmark-art" viewBox="0 0 340 84" aria-hidden="true" focusable="false"><text x="0" y="70" fill="currentColor" font-family="Arial Narrow,Arial,sans-serif" font-size="82" font-stretch="condensed" font-weight="800" letter-spacing="-8">24</text><path d="M101 13v58" stroke="var(--accent)" stroke-width="4"/><text x="120" y="59" fill="currentColor" font-family="Arial,sans-serif" font-size="36" font-weight="700" letter-spacing="5">STREET</text></svg></a><nav class="footer-links" aria-label="Navegación del pie de página"><a href="catalogo.html">Catálogo</a><a href="marcas.html">Marcas</a><a href="ofertas.html">Ofertas</a><a href="contacto.html">Contacto</a><a href="ajustes.html">Ajustes</a></nav><p>© 2026 24 STREET · Experiencia de demostración</p></footer>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras" aria-modal="true" role="dialog" aria-hidden="true" inert><div class="cart-head"><div><p class="eyebrow">Tu selección</p><h2>Carrito <span id="cartHeadCount">(0)</span></h2></div><button class="close-btn" id="cartClose" type="button" aria-label="Cerrar carrito">×</button></div><div class="cart-items" id="cartItems"><div class="cart-empty"><span>24</span><p>Tu selección está vacía.</p><a href="catalogo.html" id="emptyCartLink">Explorar catálogo</a></div></div><div class="cart-foot"><div><span>Subtotal orientativo</span><strong id="cartTotal">$0</strong></div><button class="button button-dark" id="checkoutBtn" type="button" disabled>Consultar por WhatsApp <span>↗</span></button><small>Los precios y la disponibilidad deben confirmarse.</small></div></aside><div class="overlay" id="overlay"></div><div id="cartNotice" class="cart-notice" aria-live="polite" role="status"></div>
+  <script src="catalog-data.js"></script><script src="scrips.js"></script>
+</body>
+</html>
